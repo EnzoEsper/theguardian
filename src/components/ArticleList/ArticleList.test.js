@@ -40,5 +40,20 @@ describe("Article List component", () => {
     const wrapper = shallow(<ArticleList articles={[]}/>);
 
     expect(wrapper.find('li')).toHaveLength(0);
-  })
+  });
+
+  // Comprueba que el componente presenta los resultados de búsqueda cuando los articulos/el estado cambia
+  it("Renders search results when the articles change", () => {
+    const wrapper = mount(<ArticleList articles={[]} />);
+
+    wrapper.setProps({
+      articles: [{ webUrl: "http://google.com", webTitle: "Google Search" }]
+    });
+
+    // console.log(wrapper.debug());
+    expect(wrapper.find("a").prop("href")).toEqual("http://google.com");
+  });
+
+
 });
+

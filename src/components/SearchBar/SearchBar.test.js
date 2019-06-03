@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import SearchBar from './';
 
@@ -45,6 +45,8 @@ describe('Search Bar component', () => {
 
     expect(prevented).toBe(true);
   });
+
+  
 });
 
 
