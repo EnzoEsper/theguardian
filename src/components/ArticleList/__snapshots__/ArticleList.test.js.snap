@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article List component Renders without errors  1`] = `ShallowWrapper {}`;
+
+exports[`Article List component Returns the default empty array when there is no data to map trough 1`] = `ShallowWrapper {}`;
